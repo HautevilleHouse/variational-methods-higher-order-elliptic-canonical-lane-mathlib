@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import VariationalMethodsHigherOrderEllipticCanonicalLaneLean.HigherOrderSobolevSpaces
+import VariationalMethodsHigherOrderEllipticCanonicalLaneLean.EulerLagrangeHigherOrder
+import VariationalMethodsHigherOrderEllipticCanonicalLaneLean.MountainPassTheoremHigherOrder
+
+namespace HautevilleHouse
+namespace VariationalMethodsHigherOrderEllipticCanonicalLaneLean
+
+def ConstrainedVariationalHigherOrderClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_variational_higher_order_endgame (A : AdmissibleClass) :
+    ConstrainedVariationalHigherOrderClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end VariationalMethodsHigherOrderEllipticCanonicalLaneLean
+end HautevilleHouse

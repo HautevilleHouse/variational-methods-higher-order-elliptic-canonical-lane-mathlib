@@ -1,0 +1,2 @@
+import VariationalMethodsHigherOrderEllipticCanonicalLaneLean.GateLemmas
+import VariationalMethodsHigherOrderEllipticCanonicalLaneLean.FinalTheorem
